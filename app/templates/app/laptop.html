@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+
+{% for l in laptop %}
+<div class="list" >
+    <br>
+    <ul>
+        
+        <img src="{{l.product_img.url}}" alt="" style=width:250px height:250px>
+        <li>{{l.selling_price}}</li>
+        <li>{{l.product_name}}</li>
+    </ul>
+    <hr>
+</div>
+   {% endfor %}
+
+
+{% endblock main-content %}

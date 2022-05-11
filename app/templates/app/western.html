@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+
+{% for w in western %}
+<div class="list" >
+    <br>
+    <ul>
+        
+        <img src="{{w.product_img.url}}" alt="" style=width:250px height:250px>
+        <li>{{w.selling_price}}</li>
+        <li>{{w.product_name}}</li>
+    </ul>
+    <hr>
+</div>
+   {% endfor %}
+
+
+{% endblock main-content %}
